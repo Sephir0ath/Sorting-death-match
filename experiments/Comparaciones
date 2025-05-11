@@ -1,0 +1,118 @@
+-- Descripciones --
+QuickSort: Peor caso es O(n^2), a pesar que su peor caso es lento, es frecuentemente la mejor opción practica en el caso promedio siendo O(nlogn). Se basa en el paradigma de divide y conquista (divide & conquer) al igual que mergeSort, hay que considerar que los peores casos para quicksort es que los arreglos ya estén ordenados (tanto de forma ascendente como descendente ) 
+Otros problemas con quicksort: es sensible a la distribución de datos, cuando hay elementos repetidos o cercanos entre si pueden haber: malas particiones, comparaciones innecesarias, 
+
+	Explicación aproximaciones de tiempo:
+	T(n) = C * n^2 (Siendo C el costo constante por operación elemental, o sea cuánto tiempo real toma cada operación básica)
+	si n = 100000 y t = 28000 ms
+	T(100000) = C * (100000)^2 -> C = 28000 / (100000)^2 =  2.8 * 10^-6 
+	 
+	Así estimamos que T(1000000) = 2.800.000ms = 46 min y T(10000000) = 280.000.000ms = 77 horas
+
+introsort: 
+
+Notas:
+* g++ sorts/heap.cpp sorts/quicksort.cpp main.cpp -o a
+* Comprobar por qué los primeros 50 arreglos del quicksort descendente son 100ms más rapidos que el resto de arreglos
+* Tener en cuenta: Este heapsort implementa un maxheap y no un minheap como el que muestra el profe en el ppt
+
+-- Comparaciones --
+
+Rango de números: 0 - 500.000
+Tamaños de arreglos: 10, 100, 1.000, 10.000, 100.000, 1.000.000, 10.000.000 
+Cantidad de arreglos testeados por algoritmo: 100
+
+Tiempos promedio (todos en ms):
+	- Arreglos Aleatorios:
+		- HeapSort: 0.00112709, 0.0208666, 0.209965, 2.41674, 29.7437, 373.498, 5041.74
+		- QuickSort: 0.00078559, 0.0111976, 0.105467, 1.18269, 16.3831, 425.42, 29915.5 	
+		- Sort (STL): 0.00091636, 0.0164621, 0.123046, 1.45715, 16.6794, 181.693, 2141.32
+		- MergeSort:
+		- InsertionSort:
+
+	- Arreglos ordenados en orden ascendente: 
+		- HeapSort: 0.00090745, 0.0166557, 0.174373, 2.13726, 25.8169, 297.763, 3440.8
+		- QuickSort: 0.00103488, 0.0310146, 2.86428, 283.248, 28356.2, 2760000 (estimadamente 46 minutos), 276000000 estimadamente 78 horas (C = 2.8 * 10^-6 ) 
+		- Sort (STL): 0.00048091, 0.00769649, 0.0613045, 0.739031, 8.12983, 92.717, 1148.14
+		- MergeSort:
+		- InsertionSort:
+		
+	- Arreglos ordenados en orden descendente:
+		- HeapSort: 0.00074695, 0.014405, 0.163298, 2.00266, 24.3951, 288.896, 3311.54
+		- QuickSort: 0.00088702, 0.0318792, 2.29036, 226.103, 22292.9, 2220000 (estimadamente 37 minutos), 222000000 (estimadamente 61 horas) (C = 2.2 * 10^-6 )
+		- Sort (STL): 0.00035923, 0.00771602, 0.0640989, 0.872388, 10.3021, 117.545, 1458.22
+		- MergeSort:
+		- InsertionSort:
+
+	- Arreglos con todos los elementos iguales:
+		- HeapSort: 0.00043626, 0.00369784, 0.0307701, 0.20234, 1.93117, 19.1074, 196.312
+		- QuickSort: 0.0009118, 0.0438918, 2.8964, 283.705, 28877.41, 2880000 (estimadamente 48 minutos), 288000000 (estimadamente 80 horas)  (C = 2.9 * 10^-6) 
+		- Sort (STL): 0.00026084, 0.00918679, 0.0808812, 1.11215, 13.6794, 162.046, 2051.03
+		- MergeSort:
+		- InsertionSort:
+
+
+
+Tiempos promedio de Datasets:
+	- DBLP-bwt:
+		- HeapSort:
+		- QuickSort: 	
+		- Sort (STL):
+		- MergeSort:
+		- InsertionSort:
+
+	- DBLP-lcp:
+		- HeapSort:
+		- QuickSort: 	
+		- Sort (STL): 
+		- MergeSort:
+		- InsertionSort:
+
+	- DBLP-psi:
+		- HeapSort:
+		- QuickSort: 	
+		- Sort (STL): 
+		- MergeSort:
+		- InsertionSort:
+
+	- cere-bwt:
+		- HeapSort:
+		- QuickSort: 	
+		- Sort (STL): 5440.26
+		- MergeSort:
+		- InsertionSort:
+
+	- cere-lcp:
+		- HeapSort:
+		- QuickSort: 	
+		- Sort (STL): 24161.8
+		- MergeSort:
+		- InsertionSort:
+		
+	- cere-psi:
+		- HeapSort:
+		- QuickSort: 	
+		- Sort (STL): 
+		- MergeSort:
+		- InsertionSort:
+
+	- kernel-bwt:
+		- HeapSort:
+		- QuickSort: 	
+		- Sort (STL): 
+		- MergeSort:
+		- InsertionSort:
+
+	- kernel-lcp:
+		- HeapSort:
+		- QuickSort: 	
+		- Sort (STL): 
+		- MergeSort:
+		- InsertionSort:
+
+	- kernel-psi:
+		- HeapSort:
+		- QuickSort: 	
+		- Sort (STL): 
+		- MergeSort:
+		- InsertionSort:
