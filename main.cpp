@@ -12,6 +12,7 @@
 #include "sorts/quicksort.h"
 #include "sorts/insertion.h"
 #include "sorts/mergesort.h"
+#include "sorts/merge-insertion.h"
 
 bool checkArrayIsSorted(std::vector<int>& array){
 	int prev = array[0];
@@ -48,6 +49,10 @@ void doSort(int sortValue, std::vector<int32_t>& array){
 
         case 5:
             mergeSort(array, 0, (int) array.size() - 1);
+            break;
+    
+        case 6:
+            mergeInsertionSort(array, 0, (int) array.size() - 1);
             break;
 
     }

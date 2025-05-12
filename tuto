@@ -26,15 +26,18 @@ std::vector<int32_t> array: necesitamos asegurarnos de que los tamaños porque e
 double sumtime: suma de tiempo que se tardaron todos los subarreglos en ejecutarse
 
 para compilar: g++ sorts/heap.cpp sorts/quicksort.cpp main.cpp -o a
-argumentos: ./a (archivo a leer) (0: HeapSort, 1: QuickSort, 2: Sort (STL)) (OPCIONAL: tamaño de cada arreglo)
+argumentos: ./a (archivo a leer) (x) (OPCIONAL: tamaño de cada arreglo)
+
+x = (0: HeapSort, 1: QuickSort, 2: Sort (STL), 3: RandomizedQuickSort, 4: InsertionSort, 5: MergeSort, 6: MergeInsertionSort)
 
 Si no se pone el tercer argumento, te va a devolver el tiempo que tardó en ordenar todo el archivo.
 Por otro lado, si colocas tercer argumento, te dirá el tiempo que tardó cada arreglo en ordenarse.
 
 -------------- o ------------------------------------------------------------------------------------
 randomNumbersGeneratorBinary.cpp: genera números que pueden ser aleatorios, ordenados, etc y los guarda en un archivo
-argumentos: ./c (0: aleatorios, 1: ordenados ascendente, 2: ordenados descendente, 3: todos iguales) (cantidad de arreglos) (tamaño de cada arreglo) (rango de números de generación) (archivo a guardar)
+argumentos: ./c (x) (cantidad de arreglos) (tamaño de cada arreglo) (rango de números de generación) (archivo a guardar)
 
+x = (0: aleatorios, 1: ordenados ascendente, 2: ordenados descendente, 3: todos iguales, 4: mitad ordenada mitad random, 5: mitad random mitad ordenada)
 -------------- o ------------------------------------------------------------------------------------
 
 
