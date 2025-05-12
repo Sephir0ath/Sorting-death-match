@@ -1,5 +1,3 @@
-#include "sorts/heap.h"
-#include "sorts/quicksort.h"
 #include <chrono>
 #include <stdlib.h>
 #include <vector>
@@ -9,6 +7,11 @@
 #include <sstream>
 #include <algorithm>
 #include <cstdint>
+
+#include "sorts/heap.h"
+#include "sorts/quicksort.h"
+#include "sorts/insertion.h"
+#include "sorts/mergesort.h"
 
 bool checkArrayIsSorted(std::vector<int>& array){
 	int prev = array[0];
@@ -34,9 +37,20 @@ void doSort(int sortValue, std::vector<int32_t>& array){
 		case 2:
 			std::sort(array.begin(), array.end());
 			break;
+
 		case 3:
 			randomizedQuickSort(array, 0, (int)array.size() - 1);
-	}
+            break;
+
+	    case 4:
+            insertionSort(array);
+            break;
+
+        case 5:
+            mergeSort(array, 0, (int) array.size() - 1);
+            break;
+
+    }
 }
 
 
