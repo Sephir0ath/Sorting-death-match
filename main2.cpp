@@ -15,6 +15,7 @@
 #include "sorts/mergesort.h"
 #include "sorts/parallelmerge-insertion.h"
 #include "sorts/merge-insertion.h"
+#include "sorts/timsort.h"
 
 
 bool checkArrayIsSorted(std::vector<int>& array){
@@ -70,6 +71,11 @@ std::string doSort(int sortValue, std::vector<int32_t>& array){
             return "insertionSort";
             break;
 
+        case 7:
+            timSort(array, array.size());
+            return "timSort";
+            break;
+
 		default:
 	       	return "Invalid sort option";
 
@@ -123,7 +129,7 @@ int main(int argc, char* argv[]){
 	// Leer todo el archivo como arreglos de tama├▒o arraySize
 	else{
 		#pragma omp parallel for
-		for (int i = -1; i < 7; i++){
+		for (int i = -1; i < 8; i++){
 			std::ifstream input(filename, std::ios::binary);
 			std::vector<int32_t> array(arraySize);
 			double sumTime = 0;
