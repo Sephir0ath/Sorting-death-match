@@ -40,5 +40,4 @@ argumentos: ./c (x) (cantidad de arreglos) (tamaño de cada arreglo) (rango de n
 x = (0: aleatorios, 1: ordenados ascendente, 2: ordenados descendente, 3: todos iguales, 4: mitad ordenada mitad random, 5: mitad random mitad ordenada)
 -------------- o ------------------------------------------------------------------------------------
 
-
-Explicación uso desviación esstandar para 
+El makefile va a compilar main2.cpp, main2.cpp ejecuta todos los ordenamientos a la vez así que no se coloca argumento de qué algoritmo usar

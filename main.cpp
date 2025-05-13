@@ -44,7 +44,7 @@ void doSort(int sortValue, std::vector<int32_t>& array){
             break;
 
 	    case 4:
-            insertionSort(array);
+            mergeInsertionSort(array, 0, (int) array.size() - 1);
             break;
 
         case 5:
@@ -52,7 +52,8 @@ void doSort(int sortValue, std::vector<int32_t>& array){
             break;
     
         case 6:
-            mergeInsertionSort(array, 0, (int) array.size() - 1);
+        	insertionSort(array);
+            
             break;
 
     }

@@ -1,5 +1,5 @@
-SRC_FILES = $(wildcard sorts/*.cpp main.cpp)  
+SRC_FILES = $(wildcard sorts/*.cpp main2.cpp)  
 
 default:
-	g++ -o a $(SRC_FILES) 
+	g++ -o b $(SRC_FILES) -O3 -fopenmp
 
