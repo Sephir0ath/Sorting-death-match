@@ -2,17 +2,36 @@
 
 #include "mergesort.h"
 
-void mergeSort(std::vector<int32_t>& array, int left, int right)
+void optimizedMerge(std::vector<int32_t>& array, std::vector<int32_t>& temp, int left, int mid, int right)
 {
-    if(left >= right)
+    if (array[mid] <= array[mid + 1])
     {
-        return;
+        return; 
     }
 
-    int mid = left + (right - left) / 2;
-    mergeSort(array, left, mid);
-    mergeSort(array, mid + 1, right);
-    merge(array, left, mid, right);
+    for (int i = left; i <= right; i++)
+    {
+        temp[i] = array[i];
+    }
+
+    int i = left;
+    int j = mid + 1;
+    int k = left;
+
+    while (i <= mid && j <= right)
+    {
+        if (temp[i] <= temp[j]) {
+            array[k++] = temp[i++];
+        } else {
+            array[k++] = temp[j++];
+        }
+    }
+
+    while (i <= mid) 
+    {
+        array[k++] = temp[i++];
+    }
+
 }
 
 void merge(std::vector<int32_t>& array, int left, int mid, int right)
@@ -20,6 +39,7 @@ void merge(std::vector<int32_t>& array, int left, int mid, int right)
     int n1 = mid - left + 1;
     int n2 = right - mid;
 
+    // -> Esto se puede optimizar
     int32_t *L = new int32_t[n1];
     int32_t *R = new int32_t[n2];
 
@@ -71,3 +91,26 @@ void merge(std::vector<int32_t>& array, int left, int mid, int right)
     delete[] R;
 
 }
+
+
+void mergeSortHelper(std::vector<int32_t>& array, std::vector<int32_t> &temp, int left, int right)
+{
+    if(left >= right)
+    {
+        return;
+    }
+
+    int mid = left + (right - left) / 2;
+    mergeSortHelper(array, temp, left, mid);
+    mergeSortHelper(array, temp, mid + 1, right);
+    optimizedMerge(array, temp, left, mid, right);
+}
+
+void mergeSort(std::vector<int32_t>& array, int left, int right)
+{
+    std::vector<int32_t> temp(array.size()); // -> alocación de memoria ocurre una sola vez y no en cada llamada recursiva
+    mergeSortHelper(array, temp, left, right);
+}
+
+
+
