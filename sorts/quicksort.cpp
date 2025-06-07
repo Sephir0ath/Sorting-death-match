@@ -39,7 +39,6 @@ void randomizedQuickSort(std::vector<int32_t>& array, int p, int r){
 	} 
 }
 int randomizedPartition(std::vector<int32_t>& array, int p, int r){
-	srand(time(0));
 	int i = rand() % (r - p + 1) + p;
 	swap2(array, p, i);
 	return partition(array, p, r);

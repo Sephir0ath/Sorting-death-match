@@ -25,43 +25,51 @@ bool checkArrayIsSorted(std::vector<int>& array){
 	return true;
 }
 
-void doSort(int sortValue, std::vector<int32_t>& array){
+std::string doSort(int sortValue, std::vector<int32_t>& array){
 	switch(sortValue){
 		case 0:
 			heapSort(array, (int)array.size());
+			return "heapSort";
 			break;
 			
 		case 1:
 			quickSort(array, 0, (int)array.size() - 1);
+			return "quickSort";
 			break;
 			
 		case 2:
 			std::sort(array.begin(), array.end());
+			return "STL sort";
 			break;
 
 		case 3:
 			randomizedQuickSort(array, 0, (int)array.size() - 1);
+			return "random QuickSort";
             break;
 
 	    case 4:
             mergeInsertionSort(array, 0, (int) array.size() - 1);
+			return "MergeInsertion";
             break;
 
         case 5:
             mergeSort(array, 0, (int) array.size() - 1);
+			return "MergeSort";
             break;
     
         case 6:
         	insertionSort(array);
-            
+			return "Insertion";            
             break;
-
+		default:
+			return "Invalid sort option";
+	
     }
 }
 
 
 int main(int argc, char* argv[]){
-	
+	srand(time(0));	
 	if (argc < 1){
 		exit(0);
 	}
@@ -89,12 +97,13 @@ int main(int argc, char* argv[]){
 		
 		auto end = std::chrono::steady_clock::now();
 		std::chrono::duration<double, std::milli> duration = end - start;
-		std::cout << "Tiempo transcurrido: " << duration.count() << " ms" << std::endl;
+		//std::cout << "Tiempo transcurrido: " << duration.count() << " ms" << std::endl;
 		
 	}
 
 	// Leer todo el archivo como arreglos de tamaño arraySize
 	else{
+		std::string algo;
 		std::vector<int32_t> array(arraySize);
 		double sumTime = 0;
 		int counter = 0;
@@ -103,7 +112,7 @@ int main(int argc, char* argv[]){
 		
 			auto start = std::chrono::steady_clock::now();
 
-			doSort(atoi(argv[2]), array);
+			algo = doSort(atoi(argv[2]), array);
 		
 			auto end = std::chrono::steady_clock::now(); 
 			std::chrono::duration<double, std::milli> duration = end - start;
@@ -112,7 +121,7 @@ int main(int argc, char* argv[]){
 				
 		}
 
-		std::cout  << "Promedio de tiempo: " << sumTime/counter << " ms" << std::endl;
+		std::cout << sumTime/counter << ", " << std::endl;
 		
 				
 	}
