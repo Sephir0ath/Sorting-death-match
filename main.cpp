@@ -97,7 +97,7 @@ int main(int argc, char* argv[]){
 		
 		auto end = std::chrono::steady_clock::now();
 		std::chrono::duration<double, std::milli> duration = end - start;
-		//std::cout << "Tiempo transcurrido: " << duration.count() << " ms" << std::endl;
+		std::cout << "Tiempo transcurrido: " << duration.count() << " ms" << std::endl;
 		
 	}
 
@@ -121,7 +121,7 @@ int main(int argc, char* argv[]){
 				
 		}
 
-		std::cout << sumTime/counter << ", " << std::endl;
+		std::cout << "Tiempo promedio: "<< sumTime/counter << std::endl;
 		
 				
 	}

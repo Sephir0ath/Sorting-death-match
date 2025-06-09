@@ -32,7 +32,7 @@ mergesort = np.array([8.213e-05, 0.00026066, 0.00183742, 0.0202312, 0.220803, 2.
 insertionsort = np.array([4.85e-05, 0.00011384, 0.00076772, 0.00697973, 0.0697288, 0.960569, 9.95646])
 """
 
-#Arreglos ordenados en orden descendente
+"""#Arreglos ordenados en orden descendente
 heapsort = np.array([8.455e-05, 0.00081758, 0.0200874, 0.488517, 5.401, 62.1919, 974.489])
 quicksort = np.array([8.565e-05, 0.00311789, 0.214689, 19.9931, 2767.91, 276700.0, 27670000.0]) 
 sortSTL = np.array([9.188e-05, 0.00045233, 0.00296143, 0.0384211, 0.447895, 7.08807, 96.1349])
@@ -40,7 +40,7 @@ quicksortrandom = np.array([0.00584584, 0.0587516, 0.414323, 4.39686, 42.8719, 5
 mergeinsertionsort = np.array([0.00015089, 0.00179551, 0.0238554, 0.152024, 2.21928, 28.651, 284.208])
 mergesort = np.array([0.00016449, 0.00195614, 0.012023, 0.234106, 2.27419, 22.6458, 294.936])
 insertionsort = np.array([7.905e-05, 0.00469863, 0.295544, 25.3377, 1854.51, 185400.0, 18540000.0]) 
-
+"""
 
 
 """# Arreglos con todos los elementos iguales
@@ -53,7 +53,7 @@ mergesort = np.array([0.00013805, 0.00058914, 0.00429605, 0.0422489, 0.3824, 3.6
 insertionsort = np.array([6.591e-05, 0.00015959, 0.00097256, 0.019148, 0.121656, 1.82988, 15.3272])
 """
 
-"""# Arreglos con la primera mitad de los elementos ordenados
+# Arreglos con la primera mitad de los elementos ordenados
 heapsort = np.array([0.00019135, 0.00406105, 0.0610745, 0.871837, 11.7956, 248.185, 1570.54])
 quicksort = np.array([0.00020785, 0.00393309, 0.0845196, 5.64559, 162.874, 269.096, 1320.83]) 
 sortSTL = np.array([7.467e-05, 0.00129701, 0.0172712, 0.212732, 2.74087, 39.4308, 492.796])
@@ -61,7 +61,7 @@ quicksortrandom = np.array([0.00039391, 0.00548386, 0.0444117, 0.530821, 8.71809
 mergeinsertionsort = np.array([0.0001409, 0.00169093, 0.0223555, 0.238035, 3.13928, 38.7172, 475.429])
 mergesort = np.array([0.00024287, 0.0017062, 0.020546, 0.259627, 3.30348, 40.1424, 482.126])
 insertionsort = np.array([0.0001047, 0.00075905, 0.0203077, 1.61047, 155.946, 15808.2, 1550000]) 
-"""
+
 
 #Arreglos con la segunda mitad de los elementos ordenados
 """heapsort = np.array([0.00011993, 0.00290443, 0.0438809, 0.528532, 6.1036, 78.8204, 1649.92])
@@ -85,9 +85,9 @@ plt.loglog(n, insertionsort, marker='x', linestyle='-', color='black', label='In
 
 plt.xlabel("Tamaño del arreglo (n)")
 plt.ylabel("Tiempo promedio (ms)")
-plt.title("Comparación de arreglos con la segunda mitad ordenada")
+plt.title("Comparación de arreglos con la primera mitad ordenada")
 plt.legend()
 plt.grid(True, which="both", ls="--")
 
 #plt.show()
-plt.savefig('graficos/arreglos2.png', dpi=300, bbox_inches='tight')
+plt.savefig('graficos/arreglos4.png', dpi=300, bbox_inches='tight')
