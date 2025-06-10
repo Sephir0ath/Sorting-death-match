@@ -1,4 +1,4 @@
-# Análisis y Comparación de Algoritmos de Ordenamiento 📊
+# Análisis y Comparación de Algoritmos de Ordenamiento 
 
 Este repositorio contiene implementaciones de diversos algoritmos de ordenamiento y un generador de archivos de prueba para evaluar su rendimiento.
 
