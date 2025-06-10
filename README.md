@@ -42,7 +42,7 @@ Este generará un ejecutable _main_ con el cual se podrán realizar las pruebas.
 ```bash
 ./main example.bin 0
 ```
---
+---
 ### Generador de archivos con valores binarios para testear main (`randomNumbersGeneratorBinary`)
 **Compilación:**
 
