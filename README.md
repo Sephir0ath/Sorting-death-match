@@ -4,7 +4,7 @@ Este repositorio contiene implementaciones de diversos algoritmos de ordenamient
 
 ## 🛠️ Compilación y Ejecución
 
-#### Programa Principal (`main`)
+### Programa Principal (`main`)
 
 Compila y ejecuta los algoritmos de ordenamiento sobre archivos de entrada.
 
@@ -42,8 +42,8 @@ Este generará un ejecutable _main_ con el cual se podrán realizar las pruebas.
 ```bash
 ./main example.bin 0
 ```
-
-#### Generador de archivos con valores binarios para testear main (`randomNumbersGeneratorBinary`)
+--
+### Generador de archivos con valores binarios para testear main (`randomNumbersGeneratorBinary`)
 **Compilación:**
 
 ```bash
