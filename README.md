@@ -21,7 +21,7 @@ Este generará un ejecutable _main_ con el cual se podrán realizar las pruebas.
 ```
 <archivo_a_leer>: Ruta del archivo con los datos de entrada
 
-[A]: Algoritmo a utilizar:
+[A]: Algoritmo a utilizar:  
 0) HeapSort
 1) QuickSort
 2) Sort (STL)
@@ -53,7 +53,7 @@ g++ randomNumbersGeneratorBinary.cpp -o c
 ```bash
 ./c [A] <cantidad_de_arreglos> <tamaño_de_cada_arreglo> <rango_de_números> <archivo_a_guardar>
 ```
-[A]: Tipo de distribución:
+[A]: Tipo de distribución:  
 0) Aleatorios
 1) Ordenados ascendente
 2) Ordenados descendente
