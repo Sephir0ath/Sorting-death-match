@@ -22,6 +22,7 @@ Este generará un ejecutable _main_ con el cual se podrán realizar las pruebas.
 <archivo_a_leer>: Ruta del archivo con los datos de entrada
 
 [A]: Algoritmo a utilizar:  
+
 0) HeapSort
 1) QuickSort
 2) Sort (STL)
