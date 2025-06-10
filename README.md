@@ -55,6 +55,7 @@ g++ randomNumbersGeneratorBinary.cpp -o c
 ./c [A] <cantidad_de_arreglos> <tamaño_de_cada_arreglo> <rango_de_números> <archivo_a_guardar>
 ```
 [A]: Tipo de distribución:  
+
 0) Aleatorios
 1) Ordenados ascendente
 2) Ordenados descendente
