@@ -63,10 +63,10 @@ g++ randomNumbersGeneratorBinary.cpp -o c
 4) Mitad ordenada, mitad random
 5) Mitad random, mitad ordenada
 
-<cantidad_de_arreglos>: Número de arreglos a generar
-<tamaño_de_cada_arreglo>: Tamaño de cada arreglo generado 
-<rango_de_números>: Rango de valores para los números generados
-<archivo_a_guardar>: Nombre del archivo de salida
+<cantidad_de_arreglos>: Número de arreglos a generar  
+<tamaño_de_cada_arreglo>: Tamaño de cada arreglo generado   
+<rango_de_números>: Rango de valores para los números generados  
+<archivo_a_guardar>: Nombre del archivo de salida  
 
  (notar que lo que hace cantidad_de_arreglos es multiplicar el tamaño de cada arreglo por la cantidad de arreglos que se quieren generar en el archivo)
 #### Ejemplos:
