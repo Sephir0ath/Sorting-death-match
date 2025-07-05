@@ -82,5 +82,5 @@ g++ randomNumbersGeneratorBinary.cpp -o c
 
 ## Contribuyentes ✨
 * [Juan Felipe Raysz Muñoz](https://github.com/Sephir0ath)
-* [Francisca Isidora Núñez Larenas](https://github.com/sshiro0)
+* [Manuel Isaac Núñez Larenas](https://github.com/sshiro0)
 * [Oliver Isaías Peñailillo Sanzana](https://github.com/pyrrss)
